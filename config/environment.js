@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'weather-gifs',
     environment,
-    rootURL: '/',
+    rootURL: '/dist/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -45,7 +45,6 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-    ENV.rootURL = 'https://adavidliu.github.io/gif-weather/dist/';
   }
 
   return ENV;
