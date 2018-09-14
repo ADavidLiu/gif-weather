@@ -1,5 +1,5 @@
 <main>
-    <div class="search">
+    <div class="search animated {{strActiveClass}}">
         {{search-input fetchData=(action "fetchData") updateLocation=(action "updateLocation")}}
         {{search-result strUrlGif=strUrlGif currentWeather=strWeather currentLocation=strLocation}}
     </div>

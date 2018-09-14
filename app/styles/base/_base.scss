@@ -49,10 +49,10 @@ input,
 button,
 select,
 textarea {
-    border: none !important;
+    border: none;
 
     &:focus {
-        outline: none !important;
+        outline: none;
     }
 }
 

@@ -3,15 +3,17 @@ import Component from '@ember/component';
 export default Component.extend({
     strTranslatedWeather: "",
     arrTranslations: [
-        { Drizzle: "lloviznando" },
-        { Rain: "lloviendo" },
-        { Sunny: "soleado" },
-        { Clouds: "nuboso" },
-        { Fog: "con neblina" },
-        { Mist: "con neblina" },
-        { Clear: "despejado" }
+        { Drizzle: "lloviznando 🌧️" },
+        { Rain: "lloviendo ⛈️" },
+        { Sunny: "soleado ☀️" },
+        { Clouds: "nuboso ☁️" },
+        { Fog: "con niebla 🌫️" },
+        { Mist: "con neblina 🌁" },
+        { Haze: "con neblina ligera 🌁" },
+        { Clear: "despejado ️️️☀️🌈" }
     ],
     didUpdateAttrs() {
+        this.set("strTranslatedWeather", "");
         const arrTranslated = this.get("arrTranslations").filter(translation => {
             const arrKey = Object.keys(translation);
             return arrKey[0] === this.currentWeather;

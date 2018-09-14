@@ -9,9 +9,19 @@ export default Controller.extend({
     strUrlGif: "",
     strKeyGif: "JAO0qgUKKSVSJrdrOHmMifK4Eqv1fV6g",
     strEndpointGif: "http://api.giphy.com/v1/gifs/search?q=",
+    strActiveClass: "",
     actions: {
+        resetInfo() {
+            this.set("strActiveClass", "");
+            this.set("strWeather", "");
+            const timeout = setTimeout(() => {
+                this.set("strUrlGif", "");
+                clearTimeout(timeout);
+            }, 500);
+        },
         updateLocation(strNewLocation) {
             this.set("strLocation", strNewLocation);
+            this.send("resetInfo");
         },
         fetchData() {
             axios.get(`${this.get("strEndpointWeather")}${this.get("strLocation")}&APPID=${this.get("strKeyWeather")}`)
@@ -28,6 +38,10 @@ export default Controller.extend({
                     const strId = arrIds[Math.floor(Math.random() * arrIds.length)];
                     const strFormattedUrl = `https://media.giphy.com/media/${strId}/giphy.gif`;
                     this.set("strUrlGif", strFormattedUrl);
+                    const timeout = setTimeout(() => {
+                        this.set("strActiveClass", "search--active");
+                        clearTimeout(timeout);
+                    }, 1000);
                 })
                 .catch(err => {
                     console.log(err);
@@ -35,6 +49,7 @@ export default Controller.extend({
             })
             .catch(err => {
                 console.log(err);
+                this.set("strActiveClass", "search--error shake");
             });
         }
     }
