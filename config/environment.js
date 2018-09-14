@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'weather-gifs',
     environment,
-    rootURL: '/dist/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
