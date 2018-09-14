@@ -45,7 +45,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-    ENV.rootURL = "/dist/";
+    ENV.rootURL = "/gif-weather/dist/";
     ENV.locationType = "hash";
   }
 
