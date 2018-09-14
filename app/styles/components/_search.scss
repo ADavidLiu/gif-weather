@@ -1,0 +1,25 @@
+.search {
+    position: relative;
+    margin: 0 auto;
+
+    &__input {
+        width: 100vw;
+        padding: 0 15px;
+        padding: 1rem;
+        display: block;
+        font-family: "Montserrat";
+        text-align: center;
+        font-size: 50px;
+        @include atMedium {
+            width: 50vw;
+        }
+    }
+
+    &__result {
+        text-align: center;
+
+        &-img {
+            max-width: 50vw;
+        }
+    }
+}

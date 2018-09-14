@@ -1,5 +1,8 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<main>
+    <div class="search">
+        {{search-input fetchData=(action "fetchData") updateLocation=(action "updateLocation")}}
+        {{search-result strUrlGif=strUrlGif currentWeather=strWeather currentLocation=strLocation}}
+    </div>
+</main>
 
 {{outlet}}
