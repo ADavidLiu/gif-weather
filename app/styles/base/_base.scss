@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     font-size: 12px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -15,6 +16,27 @@ body {
     }
     @include atLarge {
         font-size: 16px;
+    }
+
+    & > * {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    transition: all .25s;
+    @include linkStates($color-primary, underline);
+
+    &:hover {
+        color: darken($color-primary, 10%);
     }
 }
 

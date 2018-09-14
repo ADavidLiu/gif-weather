@@ -4,13 +4,14 @@ export default Component.extend({
     strTranslatedWeather: "",
     arrTranslations: [
         { Drizzle: "lloviznando 🌧️" },
-        { Rain: "lloviendo ⛈️" },
+        { Rain: "lloviendo 🌧️" },
         { Sunny: "soleado ☀️" },
         { Clouds: "nuboso ☁️" },
         { Fog: "con niebla 🌫️" },
         { Mist: "con neblina 🌁" },
         { Haze: "con neblina ligera 🌁" },
-        { Clear: "despejado ️️️☀️🌈" }
+        { Clear: "despejado ️️️☀️🌈" },
+        { Thunderstorm: "lloviendo fuerte con truenos ⛈️" }
     ],
     didUpdateAttrs() {
         this.set("strTranslatedWeather", "");

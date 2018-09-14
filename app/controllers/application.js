@@ -28,6 +28,7 @@ export default Controller.extend({
             .then(res => {
                 const strCurrentWeather = res.data.weather[0].main;
                 this.set("strWeather", strCurrentWeather);
+                console.log(strCurrentWeather);
                 
                 axios.get(`${this.get("strEndpointGif")}${this.get("strWeather")}&api_key=${this.get("strKeyGif")}`)
                 .then(res => {
