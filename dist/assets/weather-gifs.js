@@ -83,10 +83,10 @@
         strLocation: "",
         strWeather: "",
         strKeyWeather: "0b064246645089d67497e504ae480f50",
-        strEndpointWeather: "http://api.openweathermap.org/data/2.5/weather?q=",
+        strEndpointWeather: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=",
         strUrlGif: "",
         strKeyGif: "JAO0qgUKKSVSJrdrOHmMifK4Eqv1fV6g",
-        strEndpointGif: "http://api.giphy.com/v1/gifs/search?q=",
+        strEndpointGif: "https://cors-anywhere.herokuapp.com/http://api.giphy.com/v1/gifs/search?q=",
         strActiveClass: "",
         actions: {
             resetInfo() {
